@@ -13,7 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var dbRef = firebase.database().ref('lab/');
     dbRef.on('value', function (snapshot) {
-        updateDeviceValue(snapshot.val());
+        snapshot.forEach((device) => {
+            updateDeviceValue(device);
+        });
     });
 
 });
