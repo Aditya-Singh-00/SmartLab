@@ -18,43 +18,43 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    function updateDeviceValue(device) {
-        const id = parseInt(device.val().id.toString())
-        var div = document.getElementById(id)
-        if (div != null) {
-            div.querySelector("h4").innerHTML = device.val().status
-        } else {
-            div = document.createElement("div")
-            div.setAttribute("class", "card")
-            div.setAttribute("id", id)
-            const h4 = document.createElement("h4")
-            div.append(h4)
-            const body = document.querySelector("body")
-            body.append(div)
-            h4.addEventListener('click', function () {
-                if (device.val().status == 0) {
-                    console.log("updated value" + 100)
-                    updateDeviceStatus(device, 100)
-                } else {
-                    console.log("updated value " + 0)
-                    updateDeviceStatus(device, 0)
-                }
-            });
-            h4.innerHTML = device.val().status
-        }
-    
-    }
-    
-    function updateDeviceStatus(device, status) {
-    
-        firebase.database().ref('lab/' + device.val().id).set({
-            id: device.val().id,
-            lastOnTime: device.val().lastOnTime,
-            name: device.val().name,
-            status: status,
-            type: device.val().type
-        });
-    }    
-
 });
+
+function updateDeviceValue(device) {
+    const id = parseInt(device.val().id.toString())
+    var div = document.getElementById(id)
+    if (div != null) {
+        div.querySelector("h4").innerHTML = device.val().status
+    } else {
+        div = document.createElement("div")
+        div.setAttribute("class", "card")
+        div.setAttribute("id", id)
+        const h4 = document.createElement("h4")
+        div.append(h4)
+        const body = document.querySelector("body")
+        body.append(div)
+        h4.addEventListener('click', function () {
+            if (device.val().status == 0) {
+                console.log("updated value" + 100)
+                updateDeviceStatus(device, 100)
+            } else {
+                console.log("updated value " + 0)
+                updateDeviceStatus(device, 0)
+            }
+        });
+        h4.innerHTML = device.val().status
+    }
+
+}
+
+function updateDeviceStatus(device, status) {
+
+    firebase.database().ref('lab/' + device.val().id).set({
+        id: device.val().id,
+        lastOnTime: device.val().lastOnTime,
+        name: device.val().name,
+        status: status,
+        type: device.val().type
+    });
+}
 
