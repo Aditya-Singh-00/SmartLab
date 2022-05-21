@@ -33,7 +33,7 @@ function updateDeviceValue(device) {
         div.append(h4)
         const body = document.querySelector("body")
         body.append(div)
-        h4.addEventListener('click', function (event) {
+        h4.addEventListener('click', function () {
             if (device.val().status == 0) {
                 console.log("updated value" + 100)
                 updateDeviceStatus(device, 100)
@@ -49,7 +49,7 @@ function updateDeviceValue(device) {
 
 function updateDeviceStatus(device, status) {
 
-    firebase.database().ref('lab/' + id).set({
+    firebase.database().ref('lab/' + device.val().id).set({
         id: device.val().id,
         lastOnTime: device.val().lastOnTime,
         name: device.val().name,
