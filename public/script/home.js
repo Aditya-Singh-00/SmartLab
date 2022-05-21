@@ -33,8 +33,8 @@ function updateDeviceValue(device) {
         const h4 = document.createElement("h4")
         const p = document.createElement("p")
         p.innerHTML = "<label class=\"switch\">" + 
-                        "input type=\"checkbox\"/>" + 
-                        "span class=\"slider round\"></span>" +
+                        "<input type=\"checkbox\"/>" + 
+                        "<span class=\"slider round\"></span>" +
                         "</label>"
         const body = document.querySelector("body")
         body.append(div)
