@@ -59,7 +59,6 @@ function updateDeviceValue(device) {
 
         const body = document.querySelector("body")
         body.append(div)
-        div.append(h4)
         div.append(checkbox)
 
     }
