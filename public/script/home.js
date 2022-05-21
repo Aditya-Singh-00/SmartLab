@@ -37,6 +37,7 @@ function updateDeviceValue(device) {
         }
 
         const checkbox = document.createElement("label")
+        checkbox.setAttribute("class","switch")
         const input = document.createElement("input")
         input.setAttribute("type","checkbox")
         input.checked = checked
