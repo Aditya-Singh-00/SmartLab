@@ -32,14 +32,14 @@ function updateDeviceValue(device) {
         div.setAttribute("id", id)
         const h4 = document.createElement("h4")
         const p = document.createElement("p")
+        p.innerHTML = "<label class=\"switch\">" + 
+                        "input type=\"checkbox\"/>" + 
+                        "span class=\"slider round\"></span>" +
+                        "</label>"
         const body = document.querySelector("body")
         body.append(div)
         div.append(h4)
         div.append(p)
-        div.append(<label class="switch"> 
-                        <input type="checkbox"/>
-                        <span class="slider round"></span>
-                    </label>)
         h4.innerHTML = device.val().status
         h4.addEventListener('click', function () {
             if (parseInt(h4.innerHTML) == 0) {
