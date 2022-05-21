@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    var dbRef = firebase.database().ref('lab/');
-    dbRef.on('value', function (snapshot) {
-        snapshot.forEach((device) => {
-            updateDeviceValue(device);
-        });
-    });
+});
 
+var dbRef = firebase.database().ref('lab/');
+dbRef.on('value', function (snapshot) {
+    snapshot.forEach((device) => {
+        updateDeviceValue(device);
+    });
 });
 
 function updateDeviceValue(device) {
