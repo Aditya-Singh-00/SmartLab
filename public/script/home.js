@@ -36,10 +36,10 @@ function updateDeviceValue(device) {
         h4.addEventListener('click', function (event) {
             if (device.val().status == 0) {
                 console.log("updated value" + 100)
-                updateDeviceStatus(id, 100)
+                updateDeviceStatus(device, 100)
             } else {
                 console.log("updated value " + 0)
-                updateDeviceStatus(id, 0)
+                updateDeviceStatus(device, 0)
             }
         });
         h4.innerHTML = device.val().status
@@ -47,9 +47,14 @@ function updateDeviceValue(device) {
 
 }
 
-function updateDeviceStatus(id, status) {
+function updateDeviceStatus(device, status) {
+
     firebase.database().ref('lab/' + id).set({
-        status: status
+        id: device.val().id,
+        lastOnTime: device.val().lastOnTime,
+        name: device.val().name,
+        status: status,
+        type: device.val().type
     });
 }
 
