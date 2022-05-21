@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function updateDeviceValue(device) {
+   
     const id = parseInt(device.val().id.toString())
     var div = document.getElementById(id)
-    if (div != null) {
-        //div.querySelector("h4").innerHTML = device.val().status
-    } else {
+   
+    if (div == null) {
         div = document.createElement("div")
         div.setAttribute("class", "card")
         div.setAttribute("id", id)
@@ -37,12 +37,12 @@ function updateDeviceValue(device) {
         }
 
         const checkbox = document.createElement("label")
-        checkbox.setAttribute("class","switch")
+        checkbox.setAttribute("class", "switch")
         const input = document.createElement("input")
-        input.setAttribute("type","checkbox")
+        input.setAttribute("type", "checkbox")
         input.checked = checked
 
-        input.addEventListener('change', function() {
+        input.addEventListener('change', function () {
             if (this.checked) {
                 console.log("updated value " + 100)
                 updateDeviceStatus(device, 100)
@@ -50,20 +50,19 @@ function updateDeviceValue(device) {
                 console.log("updated value " + 0)
                 updateDeviceStatus(device, 0)
             }
-          });
+        });
 
         const span = document.createElement("span")
-        span.setAttribute("class","slider round")
+        span.setAttribute("class", "slider round")
 
         checkbox.appendChild(input)
         checkbox.appendChild(span)
 
-        const body = document.querySelector("body")
+        const body = document.getElementById("main-content")
         body.append(div)
         div.append(checkbox)
 
     }
-
 }
 
 function updateDeviceStatus(device, status) {
