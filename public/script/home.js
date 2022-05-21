@@ -38,9 +38,11 @@ function updateDeviceValue(device) {
             if (device.val().status == 0) {
                 console.log("updated value" + 100)
                 updateDeviceStatus(device, 100)
+                h4.innerHTML = 100
             } else {
                 console.log("updated value " + 0)
                 updateDeviceStatus(device, 0)
+                h4.innerHTML = 0
             }
         });
         h4.innerHTML = device.val().status
