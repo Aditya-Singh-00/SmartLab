@@ -34,8 +34,9 @@ function updateDeviceValue(device) {
         const body = document.querySelector("body")
         body.append(div)
         div.append(h4)
+        h4.innerHTML = device.val().status
         h4.addEventListener('click', function () {
-            if (device.val().status == 0) {
+            if (parseInt(h4.innerHTML) == 0) {
                 console.log("updated value" + 100)
                 updateDeviceStatus(device, 100)
             } else {
@@ -43,7 +44,6 @@ function updateDeviceValue(device) {
                 updateDeviceStatus(device, 0)
             }
         });
-        h4.innerHTML = device.val().status
     }
 
 }
