@@ -113,8 +113,8 @@ function updateDeviceStatus(device, status) {
 function getTimeDifference(current,prev) {
     var diff = current - prev
 
-    var minutes = diff / ((60 * 1000) % 60)
-    var hours = diff / (60 * 60 * 1000)
+    var minutes = Math.floor(diff / (60 * 1000) % 60)
+    var hours = Math.floor(diff / (60 * 60 * 1000))
 
     var timeDiffStr = ""
 
