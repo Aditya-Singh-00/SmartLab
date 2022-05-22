@@ -73,17 +73,17 @@ function updateDeviceValue(device) {
         div.append(checkbox)
 
     } else {
-        // console.log(div.id)
-        // const p = document.getElementById(device.val().id.toString+"-p")
-        // const input = document.getElementById(device.val().id.toString+"-checkbox")
+
+        const p = div.children[device.val().id.toString+"-p"]
+        const input = div.children[2].children[device.val().id.toString+"-checkbox"]
         
-        // if (device.val().status == 0) {
-        //     p.innerHTML = ""
-        //     input.checked = false
-        // } else {
-        //     p.innerHTML = getTimeDifference(Date.now(), device.val().lastOnTime)
-        //     input.checked = true
-        // }
+        if (device.val().status == 0) {
+            p.innerHTML = ""
+            input.checked = false
+        } else {
+            p.innerHTML = getTimeDifference(Date.now(), device.val().lastOnTime)
+            input.checked = true
+        }
     }
 }
 
@@ -110,6 +110,8 @@ function getTimeDifference(current,prev) {
     var minutes = parseInt((diff / ((60 * 1000) % 60)).toString)
     var hours = parseInt((diff / (60 * 60 * 1000)).toString);
 
+    console.log(minutes) 
+    console.log(hours)
     var timeDiffStr = ""
 
     if (hours == 0 && minutes < 1) {
