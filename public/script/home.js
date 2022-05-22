@@ -69,6 +69,17 @@ function updateDeviceValue(device) {
         div.append(p)
         div.append(checkbox)
 
+    } else {
+        const p = div.children("p")
+        const input = div.children("input")
+        
+        if (device.val().status == 0) {
+            p.innerHTML = ""
+            input.checked = false
+        } else {
+            p.innerHTML = getTimeDifference(Date.now(), device.val().lastOnTime)
+            input.checked = true
+        }
     }
 }
 
@@ -92,8 +103,8 @@ function updateDeviceStatus(device, status) {
 function getTimeDifference(current,prev) {
     var diff = current - prev
 
-    var minutes = diff / (60 * 1000) % 60
-    var hours = diff / (60 * 60 * 1000);
+    var minutes = parseInt( (diff / (60 * 1000) % 60).toString)
+    var hours = parseInt((diff / (60 * 60 * 1000).toString));
 
     var timeDiffStr = ""
 
