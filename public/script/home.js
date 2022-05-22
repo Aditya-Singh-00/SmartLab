@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
         deviceListA.forEach((device) => {
             updateDeviceValue(device, "A")
         });
+        deviceListB.forEach((device) => {
+            updateDeviceValue(device, "B")
+        });
     });
 
 });

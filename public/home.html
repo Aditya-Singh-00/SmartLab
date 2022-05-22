@@ -16,23 +16,26 @@
 <body>
   <div id="loading"> Loading... </div>
   <div id="main-content">
-    <div class="tab">
-      <button class="tablinks-A" onclick="showDevices(event, 'FAN-A' ,'A')">Fans</button>
-      <button class="tablinks-A" onclick="showDevices(event, 'LIGHT-A', 'A')">Lights</button>
-      <button class="tablinks-A" onclick="showDevices(event, 'AC-A', 'A')">ACs</button>
+    <div id="306-A">
+      <div class="tab">
+        <button class="tablinks-A" onclick="showDevices(event, 'FAN-A' ,'A')">Fans</button>
+        <button class="tablinks-A" onclick="showDevices(event, 'LIGHT-A', 'A')">Lights</button>
+        <button class="tablinks-A" onclick="showDevices(event, 'AC-A', 'A')">ACs</button>
+      </div>
+      <div id="FAN-A" class="tabcontent-A"></div>
+      <div id="LIGHT-A" class="tabcontent-A"></div>
+      <div id="AC-A" class="tabcontent-A">
+      </div>
     </div>
-    
-    <!-- Tab content -->
-    <div id="FAN-A" class="tabcontent-A">
-      
-    </div>
-    
-    <div id="LIGHT-A" class="tabcontent-A">
-      
-    </div>
-    
-    <div id="AC-A" class="tabcontent-A">
-      
+    <div id="306-B">
+      <div class="tab">
+        <button class="tablinks-B" onclick="showDevices(event, 'FAN-B' ,'B')">Fans</button>
+        <button class="tablinks-B" onclick="showDevices(event, 'LIGHT-B', 'B')">Lights</button>
+        <button class="tablinks-B" onclick="showDevices(event, 'AC-B', 'B')">ACs</button>
+      </div>
+      <div id="FAN-B" class="tabcontent-B"></div>
+      <div id="LIGHT-B" class="tabcontent-B"></div>
+      <div id="AC-B" class="tabcontent-B"></div>
     </div>
   </div>
 </body>
