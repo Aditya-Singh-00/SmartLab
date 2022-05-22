@@ -1,11 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    document.getElementById("main-content").style.display = "none";
-
-    firebase.auth().onAuthStateChanged((user) => {
+      firebase.auth().onAuthStateChanged((user) => {
         if (user) {
             document.getElementById("loading").style.display = "none";
-            document.getElementById("main-content").style.display = "block";
         } else {
             window.location = 'login.html';
         }
