@@ -1,5 +1,7 @@
 .main-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    justify-content: space-evenly;
 }
 
 .tab {
@@ -102,4 +104,9 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+@media only screen and (max-width: 600px) {
+    .main-content {
+        grid-template-columns: 95vw;
+    }
 }
