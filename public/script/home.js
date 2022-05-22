@@ -72,8 +72,9 @@ function updateDeviceValue(device) {
 
     } else {
         console.log(div.id)
-        const p = div.children("p")
-        const input = div.children("input")
+        const children = div.children
+        const p = children[2]
+        const input = children[3]
         
         if (device.val().status == 0) {
             p.innerHTML = ""
