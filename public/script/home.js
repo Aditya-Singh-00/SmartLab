@@ -28,7 +28,7 @@ function updateDeviceValue(device) {
 
     console.log("Inside update device value function")
 
-    if (div.innerHTML.length == 0) {
+    if (div == null) {
         
         const body = document.getElementById("main-content")
         div = document.createElement("div")
