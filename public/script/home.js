@@ -73,17 +73,17 @@ function updateDeviceValue(device) {
         div.append(checkbox)
 
     } else {
-        console.log(div.id)
-        const p = document.getElementById(device.val().id.toString+"-p")
-        const input = document.getElementById(device.val().id.toString+"-checkbox")
+        // console.log(div.id)
+        // const p = document.getElementById(device.val().id.toString+"-p")
+        // const input = document.getElementById(device.val().id.toString+"-checkbox")
         
-        if (device.val().status == 0) {
-            p.innerHTML = ""
-            input.checked = false
-        } else {
-            p.innerHTML = getTimeDifference(Date.now(), device.val().lastOnTime)
-            input.checked = true
-        }
+        // if (device.val().status == 0) {
+        //     p.innerHTML = ""
+        //     input.checked = false
+        // } else {
+        //     p.innerHTML = getTimeDifference(Date.now(), device.val().lastOnTime)
+        //     input.checked = true
+        // }
     }
 }
 
