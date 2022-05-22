@@ -40,8 +40,10 @@ function updateDeviceValue(device) {
         div.setAttribute("id", id)
         h4.setAttribute("class", "device-name")
         p.setAttribute("class", "device-last-on-time")
+        p.setAttribute("id", id + "-p")
         checkbox.setAttribute("class", "switch") 
         input.setAttribute("type", "checkbox")
+        input.setAttribute("id", id + "-checkbox")
         span.setAttribute("class", "slider round")
 
         h4.innerHTML = device.val().name;
@@ -72,9 +74,8 @@ function updateDeviceValue(device) {
 
     } else {
         console.log(div.id)
-        const children = div.children
-        const p = children[1]
-        const input = children[2]
+        const p = document.getElementById(device.val().id+"-p")
+        const input = document.getElementById(device.val().id+"-checkbox")
         
         if (device.val().status == 0) {
             p.innerHTML = ""
