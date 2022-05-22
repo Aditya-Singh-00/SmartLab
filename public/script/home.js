@@ -48,6 +48,7 @@ function updateDeviceValue(device) {
         
         if (device.val().status != 0) {
             input.checked = true
+            p.innerHTML = getTimeDifference(Date.now(), device.val().lastOnTime)
         }
 
         input.addEventListener('change', function () {
