@@ -1,4 +1,4 @@
-.main-content {
+#main-content {
     display: grid;
     grid-template-columns: 45vw 45vw;
     justify-content: space-evenly;
@@ -106,7 +106,7 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 @media only screen and (max-width: 600px) {
-    .main-content {
+    #main-content {
         grid-template-columns: 95vw;
     }
 }
