@@ -25,7 +25,7 @@ function updateDeviceValue(device) {
    
     const id = parseInt(device.val().id.toString())
     var div = document.getElementById(id)
-   
+
     if (div == null) {
         
         const body = document.getElementById("main-content")
@@ -107,8 +107,8 @@ function updateDeviceStatus(device, status) {
 function getTimeDifference(current,prev) {
     var diff = current - prev
 
-    var minutes = parseInt((diff / (60 * 1000) % 60))
-    var hours = parseInt((diff / (60 * 60 * 1000)));
+    var minutes = parseInt((diff / ((60 * 1000) % 60)).toString)
+    var hours = parseInt((diff / (60 * 60 * 1000)).toString);
 
     var timeDiffStr = ""
 
