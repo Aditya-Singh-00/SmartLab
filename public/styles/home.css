@@ -36,17 +36,15 @@
 /* Style the tab content */
 .tabcontent-A {
     display: grid;
-    grid-template-columns: 45vw 45vw;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
 }
 
 .tabcontent-B {
-    display: grid;
-    grid-template-columns: 45vw 45vw;
-    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
