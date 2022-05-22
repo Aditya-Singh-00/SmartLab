@@ -50,17 +50,15 @@ function updateDeviceValue(device) {
             input.checked = true
         }
 
-        if (input.checked) {
-            p.innerHTML = getTimeDifference(Date.now(), device.val().lastOnTime)
-        }
-
         input.addEventListener('change', function () {
             if (this.checked) {
                 console.log("updated value " + 100)
                 updateDeviceStatus(device, 100)
+                p.innerHTML = getTimeDifference(Date.now(), device.val().lastOnTime)
             } else {
                 console.log("updated value " + 0)
                 updateDeviceStatus(device, 0)
+                p.innerHTML = ""
             }
         });
         
