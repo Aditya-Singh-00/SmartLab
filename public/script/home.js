@@ -26,6 +26,8 @@ function updateDeviceValue(device) {
     const id = parseInt(device.val().id.toString())
     var div = document.getElementById(id)
 
+    console.log("Inside update device value function")
+
     if (div.innerHTML.length == 0) {
         
         const body = document.getElementById("main-content")
