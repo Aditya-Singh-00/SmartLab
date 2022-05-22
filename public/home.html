@@ -15,7 +15,26 @@
 
 <body>
   <div id="loading"> Loading... </div>
-  <div id="main-content"></div>
+  <div id="main-content">
+    <div class="tab">
+      <button class="tablinks-A" onclick="showDevices(event, 'FAN-A' ,'A')">Fans</button>
+      <button class="tablinks-A" onclick="showDevices(event, 'LIGHT-A', 'A')">Lights</button>
+      <button class="tablinks-A" onclick="showDevices(event, 'AC-A', 'A')">ACs</button>
+    </div>
+    
+    <!-- Tab content -->
+    <div id="FAN-A" class="tabcontent-A">
+      
+    </div>
+    
+    <div id="LIGHT-A" class="tabcontent-A">
+      
+    </div>
+    
+    <div id="AC-A" class="tabcontent-A">
+      
+    </div>
+  </div>
 </body>
 
 </html>
