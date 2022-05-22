@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
         snapshot.forEach((device) => {
             deviceList.push(device)
         });
-        var deviceListA = deviceList.subarray(0, 14)
-        var deviceListB = deviceList.subarray(14, 28)
+        var deviceListA = deviceList.slice(0, 14)
+        var deviceListB = deviceList.slice(14, 28)
 
         deviceListA.forEach((device) => {
             updateDeviceValue(device, "A")
