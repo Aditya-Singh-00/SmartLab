@@ -27,20 +27,32 @@ function updateDeviceValue(device) {
     var div = document.getElementById(id)
    
     if (div == null) {
+        
+        const body = document.getElementById("main-content")
         div = document.createElement("div")
+        const h4 = document.createElement("h4")
+        const p = document.createElement("p")
+        const checkbox = document.createElement("label")
+        const input = document.createElement("input")
+        const span = document.createElement("span")
+
         div.setAttribute("class", "card")
         div.setAttribute("id", id)
+        h4.setAttribute("class", "device-name")
+        p.setAttribute("class", "device-last-on-time")
+        checkbox.setAttribute("class", "switch") 
+        input.setAttribute("type", "checkbox")
+        span.setAttribute("class", "slider round")
 
-        var checked = false
+        h4.innerHTML = device.val().name;
+        
         if (device.val().status != 0) {
-            checked = true
+            input.checked = true
         }
 
-        const checkbox = document.createElement("label")
-        checkbox.setAttribute("class", "switch")
-        const input = document.createElement("input")
-        input.setAttribute("type", "checkbox")
-        input.checked = checked
+        if (input.checked) {
+            p.innerHTML = getTimeDifference(Date.now(), device.val().lastOnTime)
+        }
 
         input.addEventListener('change', function () {
             if (this.checked) {
@@ -51,15 +63,12 @@ function updateDeviceValue(device) {
                 updateDeviceStatus(device, 0)
             }
         });
-
-        const span = document.createElement("span")
-        span.setAttribute("class", "slider round")
-
+        
         checkbox.appendChild(input)
         checkbox.appendChild(span)
-
-        const body = document.getElementById("main-content")
         body.append(div)
+        div.append(h4)
+        div.append(p)
         div.append(checkbox)
 
     }
@@ -80,5 +89,23 @@ function updateDeviceStatus(device, status) {
         status: status,
         type: device.val().type
     });
+}
+
+function getTimeDifference(current,prev) {
+    var diff = current - prev
+
+    var minutes = diff / (60 * 1000) % 60
+    var hours = diff / (60 * 60 * 1000);
+
+    var timeDiffStr = ""
+
+    if (hours == 0 && minutes < 1) {
+        timeDiffStr = ""
+    } else if (hours == 0) {
+        timeDiffStr = "On for last " + minutes + " min"
+    } else {
+        timeDiffStr = "On for last " + hours + " hrs"
+    }
+    return timeDiffStr
 }
 
