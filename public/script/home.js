@@ -70,6 +70,7 @@ function updateDeviceValue(device) {
         div.append(checkbox)
 
     } else {
+        console.log(div.id)
         const p = div.children("p")
         const input = div.children("input")
         
