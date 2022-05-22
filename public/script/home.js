@@ -78,8 +78,8 @@ function updateDeviceValue(device) {
         console.log("inside else statement")
         console.log(div.id);
     
-        var p = div.children[device.val().id.toString+"-p"]
-        var input = div.children[2].children[device.val().id.toString+"-checkbox"]
+        const p = div.children[div.id+"-p"]
+        const input = div.children[2].children[div.id+"-checkbox"]
         
         console.log(input.checked)
     
