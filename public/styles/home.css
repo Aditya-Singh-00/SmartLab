@@ -35,7 +35,7 @@
 
 /* Style the tab content */
 .tabcontent-A {
-    display: grid;
+    display: flex;
     flex-wrap: wrap;
     padding: 6px 12px;
     border: 1px solid #ccc;
