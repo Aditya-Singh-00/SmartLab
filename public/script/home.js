@@ -13,7 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var dbRef = firebase.database().ref('lab/');
     dbRef.on('value', function (snapshot) {
-        var deviceList = snapshot.map(device => device)
+        var deviceList = [] 
+        snapshot.forEach((device) => {
+            deviceList.push(device)
+        });
         var deviceListA = deviceList.subarray(0, 14)
         var deviceListB = deviceList.subarray(14, 28)
 
