@@ -74,8 +74,8 @@ function updateDeviceValue(device) {
 
     } else {
         console.log(div.id)
-        const p = document.getElementById(device.val().id+"-p")
-        const input = document.getElementById(device.val().id+"-checkbox")
+        const p = document.getElementById(device.val().id.toString+"-p")
+        const input = document.getElementById(device.val().id.toString+"-checkbox")
         
         if (device.val().status == 0) {
             p.innerHTML = ""
@@ -107,8 +107,8 @@ function updateDeviceStatus(device, status) {
 function getTimeDifference(current,prev) {
     var diff = current - prev
 
-    var minutes = parseInt( (diff / (60 * 1000) % 60).toString)
-    var hours = parseInt((diff / (60 * 60 * 1000).toString));
+    var minutes = parseInt((diff / (60 * 1000) % 60))
+    var hours = parseInt((diff / (60 * 60 * 1000)));
 
     var timeDiffStr = ""
 
