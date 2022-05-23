@@ -35,15 +35,11 @@
 
 /* Style the tab content */
 .tabcontent-A {
-    /*padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none; */
+    justify-items: center;
 }
 
 .tabcontent-B {
-   /* padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none; */
+    justify-items: center;
 }
 
 .switch {
