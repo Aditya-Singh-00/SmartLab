@@ -34,21 +34,16 @@
 }
 
 /* Style the tab content */
-.tabcontent-A {
+.tabcontent-A, .tabcontent-B {
+    display: none;
     justify-items: center;
 }
 
-.tabcontent-B {
-    justify-items: center;
+#FAN-A, #FAN-B {
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
-#FAN-A {
-    display: grid;
-}
-
-#FAN-B {
-    display: grid;
-}
 
 .switch {
     position: relative;
