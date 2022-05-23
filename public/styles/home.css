@@ -42,6 +42,14 @@
     justify-items: center;
 }
 
+#FAN-A {
+    display: grid;
+}
+
+#FAN-B {
+    display: grid;
+}
+
 .switch {
     position: relative;
     display: inline-block;
@@ -103,6 +111,6 @@ input:checked+.slider:before {
 }
 @media only screen and (max-width: 600px) {
     #main-content {
-        grid-template-columns: 95vw;
+        grid-template-columns: 95%;
     }
 }
