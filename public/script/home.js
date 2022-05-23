@@ -150,7 +150,8 @@ function showDevices(evt, deviceType, className) {
     }
   
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(deviceType).style.display = "block";
+    document.getElementById(deviceType).style.display = "grid";
+    document.getElementById(deviceType).style.gridTemplateColumns = "50% 50%";
     evt.currentTarget.className += " active";
   }
 
