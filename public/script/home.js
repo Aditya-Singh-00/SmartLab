@@ -99,15 +99,15 @@ function updateDeviceValue(device, className) {
 
 function updateDeviceStatus(device, status) {
 
-    // var lastOnTime = device.val().lastOnTime;
+    var lastOnTime = device.val().lastOnTime;
 
-    // if (status == 100) {
-    //     lastOnTime = Date.now();
-    // }
+    if (status == 100) {
+        lastOnTime = Date.now();
+    }
 
     firebase.database().ref('lab/' + device.val().id).set({
         id: device.val().id,
-        lastOnTime: Date.now(),
+        lastOnTime: lastOnTime,
         name: device.val().name,
         status: status,
         type: device.val().type
