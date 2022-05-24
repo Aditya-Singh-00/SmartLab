@@ -77,8 +77,8 @@ function updateDeviceValue(device, className) {
         checkbox.appendChild(span)
         body.append(div)
         div.append(h4)
-        div.append(p)
         div.append(checkbox)
+        div.append(p)
 
     } else {
         console.log("inside else statement")
