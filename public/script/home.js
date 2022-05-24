@@ -91,6 +91,8 @@ function updateDeviceValue(device, className) {
             p.innerHTML = ""
             input.checked = false
         } else {
+            console.log(device.val().lastOnTime)
+            console.log(Date.now())
             p.innerHTML = getTimeDifference(Date.now(), device.val().lastOnTime)
             input.checked = true
         }
