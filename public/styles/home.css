@@ -9,6 +9,17 @@ body {
     justify-content: space-evenly;
 }
 
+h4 {
+    margin: 0;
+    padding-bottom: 12px;
+    font-size: 24px;
+}
+
+p {
+    font-weight: 100;
+    color: #3d3c3c;
+}
+
 .tab {
     display: flex;
     justify-content: space-evenly;
@@ -51,10 +62,10 @@ body {
 /* Style the tab content */
 .tabcontent-A, .tabcontent-B {
     display: none;
-    background-color: white;
+    background-color: inherit;
     justify-items: center;
     border-radius: 10px;
-    margin: 8px;
+    margin-top: 24px;
 }
 
 #FAN-A, #FAN-B {
@@ -71,7 +82,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
     padding: 16px;
-    width: 60%;
+    width: 70%;
 }
 
 .switch {
