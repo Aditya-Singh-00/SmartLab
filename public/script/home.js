@@ -85,9 +85,7 @@ function updateDeviceValue(device, className) {
         console.log(div.id);
 
         const p = div.children[div.id + "-p"]
-        const input = div.children[2].children[div.id + "-checkbox"]
-
-        console.log(input.checked)
+        const input = div.children[1].children[div.id + "-checkbox"]
 
         if (device.val().status == 0) {
             p.innerHTML = ""
