@@ -163,4 +163,7 @@ input:checked+.slider:before {
     #main-content {
         grid-template-columns: 95%;
     }
+    #temp {
+        font-size: 20px;
+    }
 }
