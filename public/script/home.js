@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function updateTemperature(tempSensor) {
     var div = document.getElementById("temp")
     var roomTemperture = tempSensor.val().status
-    div.innerHTML = "Room temperature is " + roomTemperture + "U+0080" + "C"
+    div.innerHTML = "Room temperature is " + roomTemperture + "&#176" + "C"
 }
 
 function updateDeviceValue(device, className) {

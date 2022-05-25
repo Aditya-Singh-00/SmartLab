@@ -20,8 +20,18 @@ p {
     color: #3d3c3c;
 }
 
-.temp {
-    font-size: 36px;
+#temp, #header {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #2196F3;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    margin: 8px;
+    font-size: 24px;
+    margin-top: 36px;
+    padding: 16px;
+    border-radius: 10px;
+    color: black;
 }
 
 .tab {
