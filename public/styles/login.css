@@ -1,0 +1,58 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(20, 29, 38);
+    margin: 0;
+}
+
+div {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding: 45px;
+    color: rgb(20, 29, 38);
+    font-weight: bold;
+    font-size: 36px;
+}
+
+input {
+    border-radius: 50px;
+    border-width: 1px;
+    border-style: solid;
+    margin: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    width: 250px;
+    height: 24px;
+}
+
+button {
+    background-color: rgb(20, 29, 38);
+    border-style: none;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    margin: 8px;
+    width: 280px;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(10, 190, 190);
+    color: rgb(20, 29, 38);
+}
+
+@media only screen and (max-width: 600px) {
+    div {
+        width: min-content;
+        padding: 20px;
+        font-size: 24px;
+    }
+}

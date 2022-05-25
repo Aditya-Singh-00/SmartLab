@@ -9,14 +9,19 @@
   <script defer src="/__/firebase/9.8.1/firebase-auth-compat.js"></script>
   <script defer src="/__/firebase/init.js?useEmulator=false"></script>
   <script src="script/login.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/login.css"/>
 </head>
 
 <body>
   <div id="login">
-    <h3>Welcome to Smart Lab. Login to continue</h3>
+    <h3>Welcome to Smart Lab</h3>
     <input type="email" placeholder="email" id="email" />
     <input type="password" placeholder="password" id="password" />
     <button id="login-button">Login</button>
+  </div>
+  <div id="loading" style="display: none;">
+      Loading...
   </div>
 </body>
 
