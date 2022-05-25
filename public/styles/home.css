@@ -15,6 +15,11 @@ body {
     justify-content: space-evenly;
 }
 
+h2 {
+    align-self: center;
+    font-size: 34px;
+}
+
 h4 {
     margin: 0;
     padding-bottom: 12px;
