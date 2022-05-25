@@ -16,7 +16,9 @@ body {
 }
 
 h2 {
-    align-self: center;
+    display: grid;
+    justify-content: center;
+    color: white;
     font-size: 34px;
 }
 
