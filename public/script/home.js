@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
       firebase.auth().onAuthStateChanged((user) => {
         if (user) {
             document.getElementById("loading").style.display = "none";
+            document.getElementById("main-content").style.display = "grid";
         } else {
             window.location = 'login.html';
         }
