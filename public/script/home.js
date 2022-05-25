@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         var deviceListA = deviceList.slice(0, 14)
         var deviceListB = deviceList.slice(14, 28)
+        var temperatureSensor = deviceList.slice(28,29)
 
         deviceListA.forEach((device) => {
             updateDeviceValue(device, "A")
@@ -23,9 +24,19 @@ document.addEventListener('DOMContentLoaded', function () {
         deviceListB.forEach((device) => {
             updateDeviceValue(device, "B")
         });
+        temperatureSensor.forEach((device) =>{
+            updateTemperature(device)
+        });
+
     });
 
 });
+
+function updateTemperature(tempSensor) {
+    var div = document.getElementById("temp")
+    var roomTemperture = tempSensor.val().status
+    div.innerHTML = "Room temperature is " + roomTemperture + "U+0080" + "C"
+}
 
 function updateDeviceValue(device, className) {
 
